@@ -2,20 +2,23 @@ import React from 'react'
 import Header from './components/Headers'
 import Footer from './components/Footer'
 import { Container } from 'react-bootstrap'
-import Home from './screens/Home'
+import { Outlet } from 'react-router-dom';
+
 
 const App = () => {
+
   return (
     <>
-    <Header ></Header>
-    <main className='py-3'>
-      <Container>
-      <Home></Home>
-      </Container>
-    </main>
-    <Footer></Footer>
+      {/* <ToastContainer /> */}
+      <Header />
+      <main className='py-3'>
+        <Container>
+          <Outlet />
+        </Container>
+      </main>
+      <Footer />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
